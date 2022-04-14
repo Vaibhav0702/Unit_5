@@ -6,17 +6,27 @@ export const Todos = () => {
     const [todos, setTodos] = useState([]);
     const [text, setText] = useState("");
     const [loading,setLoading] = useState(true);
+    const [page , setPage] = useState(1);
 
     useEffect(() => {
-
+      
+        console.log("Mounted Todos")
         getData();
+        
+        //Curried function 
+          return () => {
+           
+           // after unmounting  
+            console.log("UnMounting Todos Done")
+          }
 
-    }, []);
+
+    }, [page]);
 
     const getData = async () => {
 
 
-        const data = await fetch("http://localhost:8080/todos").then((d) => d.json());
+        const data = await fetch(`http://localhost:8080/todos?_page=${page}&_limit=3`).then((d) => d.json());
 
         setTodos(data);
         setLoading(false);
@@ -45,8 +55,17 @@ export const Todos = () => {
             }}>Add todo</button>
 
             {
-                todos.map((t) => (<div>{t.titel}</div>))
+                todos.map((t) => (<div>{t.id} . {t.titel}</div>))
             }
+
+            <button onClick={()=>{
+
+             setPage(page - 1);
+
+            }}>Prev</button>
+            <button onClick={()=>{
+                setPage(page + 1);
+            }}>Next</button>
 
         </div>
 

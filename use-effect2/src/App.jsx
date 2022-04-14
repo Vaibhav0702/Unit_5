@@ -1,16 +1,19 @@
 
-import { Hello } from "./components/hello";
+// import { Hello } from "./components/hello";
 import { Todos } from "./components/Todos";
 import './App.css';
 import { useEffect, useState } from "react";
+import { Counter } from "./components/counter";
 
 
 function App() {
 
   const [todos, setTodos] = useState([]);
-
+  
   // const [age, setAge] = useState([]);
   // const [count, setCount] = useState([]);
+
+  const [show , setShow] = useState(true);
  
   useEffect(()=>{
 
@@ -53,11 +56,22 @@ function App() {
     <button on onClick={() => { setShow(!show) }}>Toggle component</button> */}
 
     <h1>Hello React </h1>
-    {todos.map((todo) => (<div>{todo.id}.{todo.titel}</div>))}
- 
+    {/* {todos.map((todo) => (<div>{todo.id}.{todo.titel}</div>))} */}
 
-    <Todos/>
 
+ {/* --------------------------------------------- */}
+
+    {show ?  <Todos/> : null }
+   
+   <button onClick={()=>{
+     setShow(!show);
+   }}>{show ? "Hide" : "Show"} Todos </button>
+
+
+   {/* ---------------------------- */}
+
+   {show ?   <Counter/> : null }
+  
 
   </div>);
 
