@@ -14,8 +14,9 @@ export const Inventory = () => {
 
     const Add = () => {
         setInv({ ...inv, books : inv.books + 1 });  // (...) spread
-
+ 
         // console.log(inv.books);
+       
       };
       const Add2 = () => {
         setInv({ ...inv, notebooks: inv.notebooks + 1 });
