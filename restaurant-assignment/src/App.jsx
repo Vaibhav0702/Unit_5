@@ -11,6 +11,7 @@ function App() {
   const [page, setPage] = useState(1);
   //const [total,setTotal]=useState(1);
   const [formdata, setFormdata] = useState({
+
     name: "",
     Image: "",
     rating: "",
@@ -19,6 +20,7 @@ function App() {
     cash: false,
     upi: false,
     card: false,
+    
 
   })
   const [filter, setFilter] = useState([]);
