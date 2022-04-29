@@ -1,0 +1,22 @@
+{
+  "task": [
+    {
+      "title": "abcd",
+      "status": false,
+      "detail": "Excited for next task",
+      "id": 1
+    },
+    {
+      "title": "Redux",
+      "status": false,
+      "detail": "learning",
+      "id": 2
+    },
+    {
+      "title": "abcdf",
+      "status": false,
+      "detail": "xyz",
+      "id": 3
+    }
+  ]
+}
