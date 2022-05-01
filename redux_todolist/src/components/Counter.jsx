@@ -1,6 +1,6 @@
 import React from "react";
 import { Addcounter, Reducecounter } from "../Redux/action";
-import { store } from "../Redux/store";
+
 import { useDispatch, useSelector } from "react-redux";
 export const Counter = () => {
     //const [state, setState]=React.useState(0);
@@ -21,7 +21,7 @@ export const Counter = () => {
         <>
             <h1>Counter:{counter}</h1>
             <button onClick={handleadd}>ADD</button>
-            <button onClick={handlereduce}>reduce</button>
+            <button onClick={handlereduce}>SUB</button>
         </>
     )
 }
