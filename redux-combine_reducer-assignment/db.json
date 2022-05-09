@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "title": "khadi",
+      "status": false,
+      "detail": "kuch bhi to nahi",
+      "id": 14
+    },
+    {
+      "title": "abcd",
+      "status": false,
+      "detail": "learn abcd",
+      "id": 16
+    }
+  ]
+}
